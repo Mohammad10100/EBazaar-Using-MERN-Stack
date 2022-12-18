@@ -1,0 +1,42 @@
+/* .hiddenInBazar{
+    display: none;
+} */
+
+.container{
+    width: 120vw;
+}
+
+#pd-section-1{
+    display: flex;
+    height: 20vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.pd-category-btn{
+    margin: 1rem;
+    width: fit-content;
+}
+
+
+
+#pd-section-2 .container{
+    width: 90%;
+    height: fit-content;
+    padding: 1rem;
+}
+.cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 18rem;
+}
+
+.card-img-top{
+    height: 190.538px;
+    width: 100%;
+}

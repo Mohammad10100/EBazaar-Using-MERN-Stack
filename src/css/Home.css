@@ -1,0 +1,24 @@
+.title-text {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+}
+
+.text-wrap {
+    text-align: left;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.5rem;
+}
+
+
+.farmer {
+    background-color: seagreen;
+    box-sizing: border-box;
+    border-radius: 1rem;
+}
+
+.div-farmer-img {
+    background-color: seagreen;
+    overflow: hidden;
+    height: 90vh;
+}
