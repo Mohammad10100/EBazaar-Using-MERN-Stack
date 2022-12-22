@@ -14,7 +14,9 @@ form{
     justify-content: center;
     align-items: center;
     width: 24vw;
+    width: 50vh;
     position: relative;
+    z-index: 10;
 }
 
 .btn{
@@ -86,14 +88,11 @@ input{
 
 .SignUp-Container{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .illustrative_Image{
     display: flex;
-    height: 55vh;
-    width: 45vw;
-    position: relative;
-    top: 9em;
-    left: 8em;
+    height: 50vh;
 }

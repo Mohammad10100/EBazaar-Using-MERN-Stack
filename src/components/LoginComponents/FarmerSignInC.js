@@ -20,7 +20,7 @@ export default function FarmerSignInC(){
     };
     return (
         <>
-            <div className="col-lg-6" id="farmerSignIn" >
+            <div  className="col-lg-6" id="farmerSignIn" >
                 <div style={Object.assign({}, Style.DivNoFlexD)}>
                     <form className='form-login' action="" method="get">
                         <div className="headingDiv">

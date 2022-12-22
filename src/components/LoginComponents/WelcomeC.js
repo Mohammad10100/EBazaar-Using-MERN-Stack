@@ -1,11 +1,11 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function WelcomeC() {
     const Style = {
         DivNoFlexD: {
             // height: '100vh',
-            width: '100%',
+            width: '80%',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -18,25 +18,31 @@ export default function WelcomeC() {
             justifyContent: 'center',
             alignItems: 'center',
             flexDirection: "column",
-            margin: '4rem' ,
+            margin: '4rem',
         },
-        H1Text:{
-            fontSize:'5vw',
+        H1Text: {
+            fontSize: '4vw',
+            // fontSize: '2vw',
         },
-        BtnStyle:{
-            width:'10rem',
+        BtnStyle: {
+            width: '10rem',
         }
     };
     return (
-        <div style={{display:'flex', flexDirection:'row'}}>
-            <div id="farmer-sign-in" style={Object.assign({}, Style.DivSignIn)}>
-                <h1 style={Object.assign({}, Style.H1Text)} className="h1-1text">ARE YOU A<br /><span style={{ color: "#198754" }}>FARMER</span>??</h1>
-                <Link to="/login/FarmerSignIn" ><div type="button" style={Object.assign({}, Style.BtnStyle)} className="btn btn-outline-success" id="farmer">SIGN IN</div></Link>
-            </div>
-            <div id="customer-sign-in" style={Object.assign({}, Style.DivSignIn)} >
-                <h1 style={Object.assign({}, Style.H1Text)} className="h2-2-text">ARE YOU A<br /><span style={{ color: "#198754" }}>CUSTOMER</span>??</h1>
-                <Link to="/login/CustomerSignIn" ><div type="button" style={Object.assign({}, Style.BtnStyle)} className="btn btn-outline-success" id="customer">SIGN IN</div></Link>
-            </div>
-        </div>
+            <>
+                <div className='col-lg-6' id="farmer-sign-in">
+                    <div style={Object.assign({}, Style.DivNoFlexD, Style.DivFlex, {margin:"4rem"})}>
+                        <h1 style={Object.assign({}, Style.H1Text)} className="h1-1text">ARE YOU A<br /><span style={{ color: "#198754" }}>FARMER</span>??</h1>
+                        <br />
+                        <Link to="/login/FarmerSignIn" ><div type="button" style={Object.assign({}, Style.BtnStyle)} className="btn btn-outline-success" id="farmer">SIGN IN</div></Link>
+                    </div>
+                </div>
+                <div className='col-lg-6' id="customer-sign-in" >
+                    <div style={Object.assign({}, Style.DivNoFlexD, Style.DivFlex, {margin:"4rem"})}>
+                        <h1 style={Object.assign({}, Style.H1Text)} className="h2-2-text">ARE YOU A<br /><span style={{ color: "#198754" }}>CUSTOMER</span>??</h1>
+                        <Link to="/login/CustomerSignIn" ><div type="button" style={Object.assign({}, Style.BtnStyle)} className="btn btn-outline-success" id="customer">SIGN IN</div></Link>
+                    </div>
+                </div>
+            </>
     );
 }
