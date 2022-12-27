@@ -4,6 +4,7 @@ import '../css/Products.css';
 import ProductComponent from './ProductComponent';
 
 
+
 export default function Products() {
   return (
     <>
@@ -16,8 +17,8 @@ export default function Products() {
       </section>
       <section id="pd-section-2">
         <div className="container" > 
-          <ProductComponent/>
           <div className="row" >
+        <ProductComponent/>
             <div className="col-lg-4 " >
               <div className="card" >
                 <img src={require("../images/img-1.jpg")} className="card-img-top" alt="product images" />

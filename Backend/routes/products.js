@@ -24,8 +24,8 @@ router.get('/fetchuserproducts', fetchuser, async (req, res) => {
 //ROUTE:2 - Add a product using Post "api/products/addproduct" Login required
 router.post('/addproducts', fetchuser, [
     body('title', 'Enter the title').isLength({ min: 4 }),
-    body('description').isLength({ min: 20 }),
-    body('price', "Must be in Rupee per KG"),
+    body('description').isLength({ min: 10 }),
+    body('price', "Must be in Rupee per KG")
     // res.json([])
 ], async (req, res) => {
     try {

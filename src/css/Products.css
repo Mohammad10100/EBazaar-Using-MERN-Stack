@@ -40,3 +40,69 @@
     height: 190.538px;
     width: 100%;
 }
+
+/* .add-product-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+#add-product-form{
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    width: auto;
+    padding: 1rem;
+    color: black;
+}
+
+#add-product-form input{
+    margin: 4px;
+}
+#add-product-btn{
+    width: 5rem;
+    height: 5rem;
+    /* margin:  2rem 0px 2rem 0px; */
+}
+
+.title-and-radio{
+    display: flex;
+    flex-direction: column;
+    /* position:relative;
+    top: 1rem;
+    border: 2px solid red; */
+    padding: rem;
+}
+
+#description{
+    height: 8rem;
+    
+}
+
+.tag-radio{
+    display: flex;
+    justify-content: center;
+    /* margin: 2rem; */
+    padding: 2rem;
+    padding-top: 0.5rem;
+    width: 100%;
+
+}
+
+.add-product-item-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+#title{
+    height: 3rem;
+}
+
+.FarmerLoggedIn{
+    display: flex;
+    justify-content: space-between;
+}
