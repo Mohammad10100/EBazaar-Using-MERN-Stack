@@ -66,8 +66,8 @@ router.get('/fetchallproducts', async (req, res) => {
     }
 })
 
-//ROUTE:4 - Updating and existing products using PUT "api/products/updateproduct/:id" Login required
-router.put('/updateproduct/:id', fetchuser, async (req, res) => {
+//ROUTE:4 - Updating and existing products using PUT "api/products/editproduct/:id" Login required
+router.put('/editproduct/:id', fetchuser, async (req, res) => {
     const { title, description, imgURL } = req.body;
 
     try {

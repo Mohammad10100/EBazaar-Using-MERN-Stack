@@ -5,7 +5,7 @@ const cors = require('cors')
 
 
 const app = express();
-const port = 2000;
+const port = 8080;
 
 //middleware
 app.use(cors())
