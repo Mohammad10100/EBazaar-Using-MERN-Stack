@@ -4,16 +4,13 @@ const cors = require('cors')
 
 
 
-const app = express(); 
+const app = express();
 const port = 2000;
 
 //middleware
+app.use(cors())
 app.use(express.json());
-var corsOptions = {
-    origin: 'http://localhost:3000',
-    optionsSuccessStatus: 200,
-}
-app.use(cors(corsOptions));
+
 
 
 connectToMongo();
@@ -25,7 +22,7 @@ app.use('/api/products', require('./routes/products'));
 
 
 
-  
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })

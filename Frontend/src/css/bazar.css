@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+
+.clouds-animation {
+    position: absolute;
+    height: 25vh;
+    width: 40vh;
+}
+
+.clouds-animation-2 {
+    top: 30vh;
+}
+
+#tea-plant {
+    height: 40vh;
+    width: 40vh;
+    position: absolute;
+    bottom: -13vh;
+}
+
+#farmer-img {
+    height: 30rem;
+    width: 30rem;
+    position: relative;
+    top: 10vh;
+    left: 10vh;
+}
+
+
+#b-section-1 {
+    background-color: white;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#b-section-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#bazar-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    width: 90%;
+    background-color: #198754;
+    border-radius: 5px;
+    padding-bottom: 3rem;
+}
+
+#featured {
+    margin: 2rem;
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 3vh;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.card-title {
+    color: black;
+}
+
+#caption-bazar {
+    font-family: 'Poppins';
+    font-size: 3.5rem;
+    position: relative;
+    bottom: 3vh;
+}
+
+.heading-caption {
+    font-family:sans-serif;
+    font-size: calc(1.375rem + 1.5vw);
+}
+
+.discription-caption{
+    /* font-size: 1.2rem; */
+    font-family:'Rubik', sans-serif;
+
+}
+
+.card-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.discription-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-right: 3rem;
+    flex-direction: column;
+}

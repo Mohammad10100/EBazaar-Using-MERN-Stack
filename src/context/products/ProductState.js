@@ -1,7 +1,8 @@
 import ProductContext from "./productContext";
 import { useState } from "react";
 
-const host = "http://localhost:2000";
+const host = "http://localhost:2000/";
+// const host = "";
 
 const ProductState = (props) => {
   const productsInitial = []
@@ -12,7 +13,7 @@ const ProductState = (props) => {
   // Get User Products
   const getUserProducts = async () => {
     // API Call
-    const response = await fetch(`${host}/api/products/fetchuserproducts`,{
+    const response = await fetch(`${host}api/products/fetchuserproducts`,{
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -22,18 +23,17 @@ const ProductState = (props) => {
     const json = await response.json();
 
     // console.log(json);
-
     setProducts(json);
   }
-
+  
+  
 
   // Add a Product
   const addProduct = async (title, description, tag, imgURL) => {
     // API Call
-    const response = await fetch(`${host}/api/products/addproducts`, {
+    const response = await fetch(`${host}api/products/addproducts`, {
       method: 'POST',
       headers: {
-        'Access-Control-Allow-Origin':'*',
         'Content-Type': 'application/json',
         'auth-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjNhNGNiZmQ3ZjQwZDAwNjMxMTZiZTVkIn0sImlhdCI6MTY3MTc0NDUwOX0.TUO2uMiXOa6fUTUG94ZxlA53KRDKMfgwozwqVoEy5nA'
       },
@@ -55,7 +55,7 @@ const ProductState = (props) => {
 
   const deleteProduct = async (id) => {
     // TODO: API Call
-    const response = await fetch(`${host}/api/products/deleteproduct/${id}`, {
+    const response = await fetch(`${host}api/products/deleteproduct/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ const ProductState = (props) => {
 
   const updateProduct = async (id, title, description, tag) => {
     // API Call
-    const response = await fetch(`${host}/api/products/updateproduct/63a42f7d13a8785c69bdc41a`, {
+    const response = await fetch(`${host}api/products/updateproduct/63a42f7d13a8785c69bdc41a`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
