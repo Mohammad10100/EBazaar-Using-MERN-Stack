@@ -31,7 +31,7 @@ function App() {
         <Alert message="This is amazing React course" />
         <Routes>
           <Route exact path="/" element={[<Home/>,<Advantages/> , <HomeFooter/>]}/>
-          <Route exact path="/SignUp" element={<SignUp/>}/>
+          <Route exact path="/SignUp/*" element={<SignUp/>}/>
           <Route exact path="/LogIn" element={<LogIn/>}/>
           <Route exact path="/Bazar" element={<Bazar/>}/>
           <Route exact path="/Products" element={<Products/>}/>

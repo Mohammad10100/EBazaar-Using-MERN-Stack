@@ -23,7 +23,7 @@ export default function Navbar() {
                         <li className="nav-item"><Link to="/" className={`nav-link nav-text ${location.pathname==='/Helpers'?'active':''}`}>Helpers</Link></li>
                         <li className="nav-item"><Link to="/" className={`nav-link nav-text ${location.pathname==='/ContactUs'?'active':''}`}>Contact Us</Link></li>
                         <li><img id="cart-img" src={require("../images/illustrations/cart.png")} alt='cart' /></li>
-                        <li className="nav-item"><Link to="/login" className="nav-link"><button type="button" className="btn btn-outline-success nav-text">Sign In</button></Link></li>
+                        <li className="nav-item"><Link to="/Login/" className="nav-link"><button type="button" className="btn btn-outline-success nav-text">Sign In</button></Link></li>
                     </ul>
                 </div>
             </nav>

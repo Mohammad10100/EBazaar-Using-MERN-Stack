@@ -33,8 +33,8 @@ function App() {
         <Alert message="This is amazing React course" />
         <Routes>
           <Route exact path="/" element={[<Home/>,<Advantages/> , <HomeFooter/>]}/>
-          <Route exact path="/Login/*" element={<Login/>}/>
-          <Route exact path="/SignUP" element={<SignUp/>}/>
+          <Route exact path="/Login" element={<Login/>}/>
+          <Route exact path="/SignUP/*" element={<SignUp/>}/>
           <Route exact path="/Bazar" element={<Bazar/>}/>
           <Route exact path="/Products" element={<Products/>}/>
           <Route exact path="/ProductManager" element={<ProductManager/>}/>
