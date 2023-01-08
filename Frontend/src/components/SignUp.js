@@ -11,9 +11,9 @@ import { Routes, Route} from 'react-router-dom';
 export default function SignUp() {
     return (
         <>
-            <div className="login_container">
+            <div className="singup_container">
 
-                <div className="row row-login" >
+                <div className="row row-signup" >
                     <Routes>
                         <Route exact path="/" element={<WelcomeC url="SignUp" />} />
                         <Route exact path="/FarmerSignUp" element={<FarmerSignUpC/>} />

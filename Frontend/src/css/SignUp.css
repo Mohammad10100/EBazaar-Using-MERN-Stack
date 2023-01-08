@@ -1,16 +1,29 @@
-.login_container{
+.signup_container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 85vh;
 }
-.row-login{
+.row-singup{
     /* padding: 0rem; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.form-login{
+.form-signup{
     width: auto;
+}
+
+.inputContainer{
+    width: 100%;
+}
+
+.forgotPassword{
+    margin-top: 0.5rem;
+}
+
+.welcome-text{
+    display: flex;
+    justify-content: center;
 }

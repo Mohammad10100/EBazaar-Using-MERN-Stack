@@ -14,21 +14,21 @@ export default function FarmerSignUpC(){
         DivFlex: {
             flexDirection: 'column',
         },
-        BtnLogin: {
+        BtnSignUp: {
             backgroundColor: '#198754',
         }
     };
     return (
         <>
-            <div  className="col-lg-6" id="farmerSignIn" >
+            <div  className="col-lg-6" id="farmerSignUp" >
                 <div style={Object.assign({}, Style.DivNoFlexD)}>
-                    <form className='form-login' action="" method="get">
+                    <form className='form-signup' action="" method="get">
                         <div className="headingDiv">
-                            <h4>Farmer Login</h4>
+                            <h4>Farmer SignUp</h4>
                         </div>
                         <span className="inputContainer">
-                            <label htmlFor="username">USERNAME</label>
-                            <input type="text" name="username" autoComplete="off" />
+                            <label htmlFor="email">EMAIL</label>
+                            <input type="email" name="email" autoComplete="off" />
                             <i className="fa fa-user"></i>
                         </span>
                         <span className="inputContainer">
@@ -36,14 +36,24 @@ export default function FarmerSignUpC(){
                             <input type="password" name="password" />
                             <i className="fa fa-lock"></i>
                         </span>
+                        <span className="inputContainer">
+                            <label htmlFor="Shopname">SHOP NAME</label>
+                            <input type="text" name="Shopname" />
+                            {/* <i className="fa fa-lock"></i> */}
+                        </span>
+                        <span className="inputContainer">
+                            <label htmlFor="city">YOUR CITY'S NAME</label>
+                            <input type="text" name="city" />
+                            {/* <i className="fa fa-lock"></i> */}
+                        </span>
 
-                        <Link className="forgotPassword" to="/">FORGOT PASSWORD</Link>
+                        {/* <Link className="forgotPassword" to="/">FORGOT PASSWORD</Link> */}
 
-                        <input style={Object.assign({}, Style.BtnLogin)} type="button" className="btn-1" value="LOGIN" />
+                        <input style={Object.assign({}, Style.BtnSignUp)} type="button" className="btn-1" value="SIGNUP" />
                     </form>
                 </div>
             </div>
-            <div id="welcome-text-1" className="col-lg-6">
+            <div id="welcome-text-1" className="col-lg-6 welcome-text">
                 <div style={Object.assign({}, Style.DivNoFlexD, Style.DivFlex)} >
                     <h1 style={{ textAlign: "center" }}>Wecolme Back to <span style={{ color: "#198754" }}>EBazaar</span></h1>
                     <Link to="/SignUp"><button className="btn btn-outline-success" id="return-1">Return Back</button></Link>

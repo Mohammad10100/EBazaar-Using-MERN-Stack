@@ -13,19 +13,19 @@ export default function CustomerSignUpC() {
         DivFlex: {
             flexDirection: 'column',
         },
-        BtnLogin: {
+        BtnSignUp: {
             backgroundColor: '#198754',
         }
     };
     return (
         <>
-            <div className='col-lg-6' id="customerSignIn" >
+            <div className='col-lg-6' id="customerSignUp" >
                 <div style={Object.assign({}, Style.DivNoFlexD)}>
-                    <form className='form-login' action="" method="get">
-                        <div className="headingDiv"><h4>Customer Login</h4></div>
+                    <form className='form-signup' action="" method="get">
+                        <div className="headingDiv"><h4>Customer SignUp</h4></div>
                         <span className="inputContainer">
-                            <label htmlFor="username">USERNAME</label>
-                            <input type="text" name="username" autoComplete="off" />
+                            <label htmlFor="email">EMAIL</label>
+                            <input type="text" name="email" autoComplete="off" />
                             <i className="fa fa-user"></i>
                         </span>
                         <span className="inputContainer">
@@ -33,13 +33,18 @@ export default function CustomerSignUpC() {
                             <input type="password" name="password" />
                             <i className="fa fa-lock"></i>
                         </span>
+                        <span className="inputContainer">
+                            <label htmlFor="name">YOUR NAME</label>
+                            <input type="text" name="name" />
+                            {/* <i className="fa fa-lock"></i> */}
+                        </span>
 
-                        <Link className="forgotPassword" to="/">FORGOT PASSWORD</Link>
-                        <input style={Object.assign({}, Style.BtnLogin)}  type="button" className="btn-1" value="LOGIN" />
+                        {/* <Link className="forgotPassword" to="/">FORGOT PASSWORD</Link> */}
+                        <input style={Object.assign({}, Style.BtnSignUp)}  type="button" className="btn-1" value="SIGNUP" />
                     </form>
                 </div>
             </div>
-            <div  id="welcome-text-2" className="col-lg-6">
+            <div  id="welcome-text-2" className="col-lg-6 welcome-text">
                 <div style={Object.assign({}, Style.DivNoFlexD, Style.DivFlex)}>
                     <h1 style={{ textAlign: "center" }}>Wecolme Back to <span style={{ color: "#198754" }}>EBazaar</span></h1>
                     <Link to="/SignUp"><button className="btn btn-outline-success" id="return-2">Return Back</button></Link>

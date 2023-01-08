@@ -33,14 +33,12 @@ export default function LogIn() {
                     <div className='col-lg-7' >
                         <div style={Object.assign({}, Style.DivNoFlexD)}>
                             <form action="/" className='html' style={Object.assign({}, Style.DivNoFlexD, Style.DivFlex,)}>
-                                <h2 className="">Sign Up</h2>
+                                <h2 className="">Sign In</h2>
                                 <p className="light">Please enter your datails to get signed-up to E Bazaar</p>
                                 <input type="text" placeholder="Email/PhoneNo" id="" className="username my-1" />
                                 <input type="password" placeholder="Password" id="" className="password my-1" />
-                                <div className="radio my-1">
-                                    {/* <Link id="trouble" to="/">
-                                    Having trouble to sign in?
-                                    </Link> */}
+                                {/* <div className="radio my-1">
+                                    <Link id="trouble" to="/">Having trouble to sign in?</Link>
                                     <div className={`radio-choice ${farmeractive==='farmer'?'active-css':''}`}>
                                         Farmer
                                         <input onChange={onChange} type="radio" value="farmer" name="account-type" id="farmer_radio" />
@@ -49,9 +47,9 @@ export default function LogIn() {
                                         Customer
                                         <input onChange={onChange} type="radio" value="customer" name="account-type" id="customer_radio" />
                                     </div>
-                                </div>
-                                <div className="btn btn-success">Sign Up</div>
-                                <p className="light">-- or Sign Up with --</p>
+                                </div> */}
+                                <div className="btn btn-success">Sign In</div>
+                                <p className="light">-- or Sign In with --</p>
                                 <ul className="signUl">
                                     <li className="signLi"><i className="fa fa-apple"> </i> Apple ID </li>
                                     <li className="signLi"><i className="fa fa-google"> </i> Google</li>

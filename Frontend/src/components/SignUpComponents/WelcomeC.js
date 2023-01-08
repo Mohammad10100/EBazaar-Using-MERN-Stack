@@ -15,7 +15,7 @@ export default function WelcomeC(props) {
         DivFlex: {
             flexDirection: 'column',
         },
-        DivSignIn: {
+        DivSignUp: {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -32,17 +32,17 @@ export default function WelcomeC(props) {
     };
     return (
         <>
-            <div className='col-lg-6' id="farmer-sign-in">
+            <div className='col-lg-6' id="farmer-sign-up">
                 <div style={Object.assign({}, Style.DivNoFlexD, Style.DivFlex, { margin: "4rem" })}>
                     <h1 style={Object.assign({}, Style.H1Text)} className="h1-1text">ARE YOU A<br /><span style={{ color: "#198754" }}>FARMER</span>??</h1>
                     <br />
-                    <Link to={"Farmer"+props.url} ><div type="button" style={Object.assign({}, Style.BtnStyle)} className="btn btn-outline-success" id="farmer">SIGN IN</div></Link>
+                    <Link to={"Farmer"+props.url} ><div type="button" style={Object.assign({}, Style.BtnStyle)} className="btn btn-outline-success" id="farmer">SIGN UP</div></Link>
                 </div>
             </div>
-            <div className='col-lg-6' id="customer-sign-in" >
+            <div className='col-lg-6' id="customer-sign-up" >
                 <div style={Object.assign({}, Style.DivNoFlexD, Style.DivFlex, { margin: "4rem" })}>
                     <h1 style={Object.assign({}, Style.H1Text)} className="h2-2-text">ARE YOU A<br /><span style={{ color: "#198754" }}>CUSTOMER</span>??</h1>
-                    <Link to={"Customer"+props.url} ><div type="button" style={Object.assign({}, Style.BtnStyle)} className="btn btn-outline-success" id="customer">SIGN IN</div></Link>
+                    <Link to={"Customer"+props.url} ><div type="button" style={Object.assign({}, Style.BtnStyle)} className="btn btn-outline-success" id="customer">SIGN UP</div></Link>
                 </div>
             </div>
         </>
