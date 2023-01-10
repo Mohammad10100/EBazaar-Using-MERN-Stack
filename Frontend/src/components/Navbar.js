@@ -19,6 +19,7 @@ export default function Navbar() {
                         <li className="nav-item"><Link to="/" className={`nav-link nav-text ${location.pathname==='/'?'active':''}`}>Home</Link></li>
                         <li className="nav-item"><Link to="/Bazar" className={`nav-link nav-text ${location.pathname==='/Bazar'?'active':''}`}>Bazaar</Link></li>
                         <li className="nav-item"><Link to="/Products" className={`nav-link nav-text ${location.pathname==='/Products'?'active':''}`}>Products</Link></li>
+                        <li className="nav-item"><Link to="/ProductManager" className={`nav-link nav-text ${location.pathname==='/ProductManager'?'active':''}`}>Product Manager</Link></li>
                         <li className="nav-item"><Link to="/" className={`nav-link nav-text ${location.pathname==='/CBS'?'active':''}`}>CBS</Link></li>
                         <li className="nav-item"><Link to="/" className={`nav-link nav-text ${location.pathname==='/Helpers'?'active':''}`}>Helpers</Link></li>
                         <li className="nav-item"><Link to="/" className={`nav-link nav-text ${location.pathname==='/ContactUs'?'active':''}`}>Contact Us</Link></li>

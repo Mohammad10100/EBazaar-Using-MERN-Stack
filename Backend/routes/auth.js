@@ -14,16 +14,17 @@ router.post('/createuser', [
     body('email').isEmail(),
     body('password', "Password must be of atleast 8 charachters").isLength({ min: 8 }),
 ], async (req, res) => {
+    let success=false;
     //if there are errors, return bad requests and the error
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+        return res.status(400).json({ success, errors: errors.array() });
     }
     try {
         // check if the email is duplicate
         let user = await User.findOne({ email: req.body.email });
         if (user) {
-            return res.status(400).json({ error: 'Sorry this email already exists' });
+            return res.status(400).json({ success, error: 'Sorry this email already exists' });
         }
 
 
@@ -46,8 +47,9 @@ router.post('/createuser', [
         //sending the token using JWT
         const authoten = jwt.sign(data, JWT_SECRET);
 
+        success=true;
         //sends the response
-        res.json({ authoten });
+        res.json({ success, authoten });
     } catch (error) {
         //if any other error occurred then log 
         console.error(error.message);
@@ -62,6 +64,7 @@ router.post('/login', [
     body('email').isEmail(),
     body('password', "Password must not be blank").exists(),
 ], async (req, res) => {
+    let success= false;
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
@@ -71,13 +74,14 @@ router.post('/login', [
     try {
         let user = await User.findOne({ email });
         if (!user) {
+
             //user does'nt exists
-            return res.status(400).json({ error: "Login credentials are not correct" });
+            return res.status(400).json({success,  error: "Login credentials are not correct" });
         }
 
         const passwordCompare = await bcrypt.compare(password, user.password);
         if (!passwordCompare) {
-            return res.status(400).json({ error: "Login credentials are not correct" });
+            return res.status(400).json({ success, error: "Login credentials are not correct" });
         }
 
         const data = {
@@ -86,7 +90,8 @@ router.post('/login', [
             }
         }
         const authoten = jwt.sign(data, JWT_SECRET);
-        res.json({ authoten });
+        success=true;
+        res.json({success, authoten });
 
 
     } catch (error) {

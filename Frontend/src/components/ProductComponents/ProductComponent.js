@@ -4,7 +4,8 @@ import ProductItems from './ProductItems';
 import AddProduct from './AddProduct';
 
 
-const ProductComponent = () => {
+const ProductComponent = (props) => {
+    const {showAlert} = props;
     const context = useContext(productContext);
     const { products, getUserProducts, editProduct } = context;
     useEffect(() => {
@@ -27,6 +28,8 @@ const ProductComponent = () => {
         console.log("updating", product);
         editProduct(product.id, product.etitle, product.eprice, product.edescription);
         refClose.current.click();
+        showAlert("Updated successfully", "success")
+
     }
 
     const onChange = (e) => {
@@ -34,7 +37,7 @@ const ProductComponent = () => {
     }
     return (
         <>
-            <AddProduct />
+            <AddProduct showAlert={showAlert}/>
             {/* Button trigger modal */}
             <button ref={ref} type="button" className="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Launch demo modal
@@ -81,7 +84,7 @@ const ProductComponent = () => {
                 {products.length===0 && 'No products on display by this Farmer'}
                 </div>
             {products.map((product) => {
-                return <ProductItems key={product._id} updateProduct={updateProduct} product={product} />
+                return <ProductItems key={product._id} updateProduct={updateProduct} product={product} showAlert={showAlert}/>
             })}
             </div>
         </>

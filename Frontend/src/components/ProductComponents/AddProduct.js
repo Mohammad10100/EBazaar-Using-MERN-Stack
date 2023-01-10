@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react'
 import productContext from "../../context/products/productContext";
 
-const AddProduct = () => {
+const AddProduct = (props) => {
+    const {showAlert} = props;
     const context = useContext(productContext);
     const { addProduct } = context;
     const [product, setProduct] = useState({ title: "", description: "", tag:"", price:"400", imgURL: "null" })
@@ -11,6 +12,8 @@ const AddProduct = () => {
         addProduct(product.title, product.description, product.tag, product.price, product.imgURL);
         // setProduct({ title: "", description: "", tag:"", price:"", imgURL: "" })
         setProduct({ title: "", description: "", tag:"", price:"", imgURL: "" })
+        showAlert("Product Added Successfully", "success")
+
     }
 
     const onChange = (e) => {

@@ -8,7 +8,6 @@ export default function Home() {
     return (
         <>
             <div className="container">
-
                 <section>
                     <div className="row div-title">
                         <div className="col-lg-6 col-md-12">

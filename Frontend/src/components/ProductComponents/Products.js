@@ -5,7 +5,8 @@ import ProductComponent from './ProductComponent';
 
 
 
-export default function Products() {
+export default function Products(props) {
+  const {showAlert} = props;
   return (
     <>
       <section id="pd-section-1">
@@ -18,7 +19,7 @@ export default function Products() {
       <section id="pd-section-2">
         <div className="container" > 
           <div className="row" >
-        <ProductComponent/>
+        <ProductComponent showAlert={showAlert}/>
             <div className="col-lg-4 " >
               <div className="card" >
                 <img src={require("../../images/img-1.jpg")} className="card-img-top" alt="product images" />

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import productContext from '../../context/products/productContext';
 
 const ProductItems = (props) => {
+    const {showAlert} = props;
     const context = useContext(productContext);
     const { deleteProduct } = context;
     const { product, updateProduct} = props;
@@ -15,7 +16,7 @@ const ProductItems = (props) => {
                         <h5 className="card-title">{product.title}</h5>
                         <p className="card-text">{product.description}</p>
                         <div className="FarmerLoggedIn">
-                            <i onClick={()=>{deleteProduct(product._id)}} className="far fa-trash-alt mx-2"></i>
+                            <i onClick={()=>{deleteProduct(product._id); showAlert("Deleted Successfully", "success")}} className="far fa-trash-alt mx-2"></i>
                             <i onClick={()=>{updateProduct(product)}} className="far fa-edit mx-2"></i>
                         </div>
                         <Link to={"/"} className="btn btn-success">Buy Now</Link>

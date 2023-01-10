@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Jquery/login.js';
 import Navbar from './components/Navbar';
-import { Alert } from './components/Alert';
+import Alert from './components/Alert';
 import Home from './components/Home';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
@@ -23,18 +23,30 @@ import{
 
 
 function App() {
+  const [alert, setAlert] = useState(null);
+  
+  const showAlert = (message, type)=>{
+    setAlert({
+      msg: message,
+      type: type
+    })
+    setTimeout(() => {
+        setAlert(null);
+    }, 1500);
+  }
+
   return (
     <>
     <ProductState>
     <Router>
         <Navbar/>
-        <Alert message="This is amazing React course" />
+        <Alert alert={alert} />
         <Routes>
           <Route exact path="/" element={[<Home/>,<Advantages/> , <HomeFooter/>]}/>
-          <Route exact path="/SignUp/*" element={<SignUp/>}/>
-          <Route exact path="/LogIn" element={<LogIn/>}/>
-          <Route exact path="/Bazar" element={<Bazar/>}/>
-          <Route exact path="/Products" element={<Products/>}/>
+          <Route exact path="/SignUp/*" element={<SignUp showAlert={showAlert}/>}/>
+          <Route exact path="/LogIn" element={<LogIn showAlert={showAlert}/>}/>
+          <Route exact path="/Bazar" element={<Bazar showAlert={showAlert}/>}/>
+          <Route exact path="/Products" element={<Products showAlert={showAlert}/>}/>
           <Route exact path="/ProductManager" element={<ProductManager/>}/>
         </Routes>
     </Router>

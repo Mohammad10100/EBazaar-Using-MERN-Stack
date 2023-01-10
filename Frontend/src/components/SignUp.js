@@ -8,7 +8,8 @@ import CustomerSignUpC from './SignUpComponents/CustomerSignUpC'
 
 import { Routes, Route} from 'react-router-dom';
 
-export default function SignUp() {
+export default function SignUp(props) {
+    const {showAlert} = props;
     return (
         <>
             <div className="singup_container">
@@ -16,8 +17,8 @@ export default function SignUp() {
                 <div className="row row-signup" >
                     <Routes>
                         <Route exact path="/" element={<WelcomeC url="SignUp" />} />
-                        <Route exact path="/FarmerSignUp" element={<FarmerSignUpC/>} />
-                        <Route exact path="/CustomerSignUp" element={<CustomerSignUpC/>} />
+                        <Route exact path="/FarmerSignUp" element={<FarmerSignUpC showAlert={showAlert}/>} />
+                        <Route exact path="/CustomerSignUp" element={<CustomerSignUpC showAlert={showAlert}/>} />
                     </Routes>
                 </div>
                 <div className="d-none d-sm-block d-xs-block" ></div>
