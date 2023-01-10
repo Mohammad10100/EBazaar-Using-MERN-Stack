@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+/* Navbar  */
+.navbar{
+  margin:0px 10px 0px 10px;
+}
+
 .container{
   width: 80%;
 }

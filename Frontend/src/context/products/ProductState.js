@@ -26,6 +26,20 @@ const ProductState = (props) => {
     setProducts(json);
   }
   
+
+    // Get All Products
+    const fetchAllProducts = async () => {
+      // API Call
+      const response = await fetch(`${host}api/products/fetchallproducts`,{
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      const json = await response.json();
+      setProducts(json);
+    }
+    
   
 
   // Add a Product
@@ -90,7 +104,7 @@ const ProductState = (props) => {
   }
 
   return (
-    <ProductContext.Provider value={{ products, addProduct, deleteProduct, editProduct, getUserProducts }}>
+    <ProductContext.Provider value={{ products, addProduct, deleteProduct, editProduct, getUserProducts, fetchAllProducts }}>
       {props.children}
     </ProductContext.Provider>
   )

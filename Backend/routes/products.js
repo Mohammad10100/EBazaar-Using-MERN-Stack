@@ -58,7 +58,7 @@ router.post('/addproducts', fetchuser, [
 router.get('/fetchallproducts', async (req, res) => {
     try {
         const response = await Product.find()
-        console.log(response);
+        // console.log(response);
         res.send(response);
     } catch (error) {
         console.error(error.message);

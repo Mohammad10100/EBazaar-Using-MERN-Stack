@@ -6,8 +6,8 @@ import Home from './components/Home';
 import LogIn from './components/LogIn';
 import SignUp from './components/SignUp';
 import ProductState from './context/products/ProductState';
-import Products from './components/ProductComponents/Products';
-import ProductManager from './components/FarmerLoggedIn/ProductManager';
+import Products from './components/ProductStore/ProductStore.js';
+import ProductManager from './components/ProductManager/ProductManager';
 import Advantages from './components/Advantages'
 import HomeFooter from './components/HomeFooter.js';
 import Bazar from './components/Bazar.js';
@@ -46,8 +46,8 @@ function App() {
           <Route exact path="/SignUp/*" element={<SignUp showAlert={showAlert}/>}/>
           <Route exact path="/LogIn" element={<LogIn showAlert={showAlert}/>}/>
           <Route exact path="/Bazar" element={<Bazar showAlert={showAlert}/>}/>
+          <Route exact path="/ProductManager" element={<ProductManager showAlert={showAlert}/>}/>
           <Route exact path="/Products" element={<Products showAlert={showAlert}/>}/>
-          <Route exact path="/ProductManager" element={<ProductManager/>}/>
         </Routes>
     </Router>
     </ProductState>

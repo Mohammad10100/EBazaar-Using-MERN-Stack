@@ -7,7 +7,7 @@ export default function Navbar() {
     useEffect(()=>{}, [location]);
     return (
         <>
-        <div className='container navber-container'>
+        {/* <div className='container navber-container'> */}
             <nav className="navbar navbar-expand-lg">
                 <Link to="/" className="navbar-brand logo">EBazaar</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@ export default function Navbar() {
                 </div>
             </nav>
             <hr />
-        </div>
+        {/* </div> */}
         </>
     )
 };
